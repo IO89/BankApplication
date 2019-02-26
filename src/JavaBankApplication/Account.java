@@ -4,22 +4,33 @@ package JavaBankApplication;
 // Account.java	  Template created on15.9.2016
 // - The class for Account objects
 // ************************************************************************
-public class Account {
+public class Account 
+{
     // Fields
+    private String accountHolderName;
     private String accountNumber;
     private double balance;
     // Constructor
 
-    public Account(String accountNumber) {
+    public Account(String accountNumber, String holderName) 
+    {
         this.accountNumber = accountNumber;
+        this.accountHolderName = holderName;
     }
 
     // Methods
-    public void deposit(double amount) {
+    public void deposit(double amount) 
+    {
         this.balance += amount;
     }
 
-    public String getAccountNumber() {
+    public String getAccountHolderName()
+    {
+        return this.accountHolderName;
+    }
+
+    public String getAccountNumber() 
+    {
         return accountNumber;
     }
 
